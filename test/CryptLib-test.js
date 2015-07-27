@@ -2,7 +2,7 @@
 
 var chai = require('chai'),
     expect = chai.expect,
-    CryptLib = require('../dist/CryptLib.js');
+    CryptLib = require('../dist/cryptLib.js');
 
 describe('CryptLib', function() {
   var cryptLib;

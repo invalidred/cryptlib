@@ -4,7 +4,7 @@
   "author": {
     "name": "Abdul Khan"
   },
-  "main": "dist/CryptLib.js",
+  "main": "dist/cryptLib.js",
   "description": "CryptLib uses AES 256 for encryption or decryption. This library can be used for encryption and decryption of strings using Node on iOS, Android and Windows",
   "contributors": [
     {
