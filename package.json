@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:invalidred/Cross-platform-AES-encryption.git"
+    "url": "git+ssh://git@github.com:invalidred/cryptlib.git"
   },
   "keywords": [
     "AES node",
@@ -44,9 +44,9 @@
     "mocha": "^2.2.4"
   },
   "engine": "node >= 0.10.x",
-  "homepage": "https://github.com/invalidred/Cross-platform-AES-encryption",
+  "homepage": "https://github.com/invalidred/cryptlib",
   "bugs": {
-    "url": "https://github.com/Pakhee/Cross-platform-AES-encryption/issues"
+    "url": "https://github.com/invalidred/cryptlib/issues"
   },
   "private": false,
   "license": "MIT",
