@@ -17,7 +17,7 @@
     }
   ],
   "scripts": {
-    "start": "node index.js",
+    "start": "node example.js",
     "test": "node node_modules/mocha/bin/mocha --reporter spec test/*"
   },
   "repository": {
