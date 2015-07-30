@@ -2,18 +2,9 @@
 
 var chai = require('chai'),
     expect = chai.expect,
-    CryptLib = require('../dist/cryptLib.js');
+    cryptLib = require('../dist/cryptLib.js');
 
 describe('CryptLib', function() {
-  var cryptLib;
-
-  before(function() {
-    cryptLib = new CryptLib();
-  });
-
-  after(function() {
-    cryptLib = null;
-  });
 
   describe('generateRandomIV()', function() {
     var errorMessage = 'cryptLib.generateRandomIV() -> needs length or in wrong format';
@@ -34,13 +25,13 @@ describe('CryptLib', function() {
       }
 
       try{
-        cryptLib.generateRandomIV('12a'); 
+        cryptLib.generateRandomIV('12a');
       } catch (message) {
         expect(message).to.equal(errorMessage);
       }
 
       try{
-        cryptLib.generateRandomIV('12.2'); 
+        cryptLib.generateRandomIV('12.2');
       } catch (message) {
         expect(message).to.equal(errorMessage);
       }
@@ -110,13 +101,13 @@ describe('CryptLib', function() {
       }
 
       try{
-        cryptLib.getHashSha256(validKey, '12a'); 
+        cryptLib.getHashSha256(validKey, '12a');
       } catch (message) {
         expect(message).to.equal(lengthErrorMessage);
       }
 
       try{
-        cryptLib.getHashSha256(validKey, '12.2'); 
+        cryptLib.getHashSha256(validKey, '12.2');
       } catch (message) {
         expect(message).to.equal(lengthErrorMessage);
       }
