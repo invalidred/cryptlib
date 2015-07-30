@@ -5,30 +5,40 @@ A module to encrypt/decrypt string in Node, written in ES6 (src folder) and tran
 
 Using companion framework libraries, you should be able to encrypt/decrypt between node, iOS, Android and Windows platforms.
 
-Companion libs can be found here: https://github.com/Pakhee/Cross-platform-AES-encryption
+Companion libs can be found here: [Cross Platform AES Encryption](https://github.com/Pakhee/Cross-platform-AES-encryption)
 
 
 ## Installation
 
-  npm install cryptlib --save
+`npm install cryptlib --save`
 
 ## Usage
 
-	var CryptLib = require('cryptlib'),
-		_crypt = new CryptLib(),
-		plainText = 'This is the text to be encrypted',
-		iv = _crypt.generateRandomIV(16), //16 bytes = 128 bit
-		key = _crypt.getHashSha256('my secret key', 32), //32 bytes = 256 bits
-		cypherText = _crypt.encrypt(plainText, key, iv),
-    originText = _crypt.decrypt(cypherText, key, iv);
+### Encrypt
+
+```javascript
+var cryptLib = require('cryptlib'),
+    iv = cryptLib.generateRandomIV(16), //16 bytes = 128 bit
+    key = cryptLib.getHashSha256('my secret key', 32), //32 bytes = 256 bits
+    encryptedText = cryptLib.encrypt('This is the text to be encrypted', key, iv);
+```
+
+### Decrypt
+
+```javascript
+var cryptLib = require('cryptlib'),
+    iv = 'iv vector used for encryption',
+    key = cryptLib.getHashSha256('my secret key', 32), //32 bytes = 256 bits
+    originalText = cryptLib.decrypt('M2rfrn9DqNHJe3Hev9nMxKKgIHoqUsc7FJM+tBGxIrl3Wk9UeKIQ5fRUUZF3q2i5', key, iv);
+```
 
 ## Run Code Sample
-  
-  npm start
+
+`npm start`
 
 ## Tests
 
-  npm test
+`npm test`
 
 ## Contributing
 
@@ -37,10 +47,11 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
-* 0.1.0 Initial release
+* 2015-07-30    1.0.1 Few basic structure changes  
+* 2015-07-26    1.0.0 Initial release  
 
 ## License
 
 MIT license; see [LICENSE](./LICENSE).
 
-(c) 2015 by Abdul Khan
+(c) 2015 by Abdul Khan and Alexey Novak
