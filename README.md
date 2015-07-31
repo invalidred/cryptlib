@@ -1,8 +1,5 @@
 # cryptlib [![Build Status](https://travis-ci.org/invalidred/cryptlib.svg?branch=master)](https://travis-ci.org/invalidred/cryptlib)
 
-CryptLib
-=========
-
 A module to encrypt/decrypt string in Node, written in ES6 (src folder) and transpiled using Babel to ES5(dist folder).
 
 Using companion framework libraries, you should be able to encrypt/decrypt between node, iOS, Android and Windows platforms.
